@@ -333,7 +333,7 @@ function Calstress(image){
     '((a * b) ** 0.5) * (0.369 + 0.598 * (a / b) ** 0.5)',{a:Ep0,b:pre}
     )
   var EET = ee.Image().expression(
-    'a * b * (a ** 2 + b ** 2 + a + b) / ((a + b) * (a ** 2 + b ** 2))',{a:pre,b:Rn}
+    'a * b * (a ** 2 + b ** 2 + a * b) / ((a + b) * (a ** 2 + b ** 2))',{a:pre,b:Rn}
     )
   var PET = ee.Image().expression(
     '(a + b) / 2',{a:EET,b:Ep0}
